@@ -1,10 +1,13 @@
-import './App.css';
+// import './App.scss';
+import Login from './Components/Login/Login';
+import './Components/Styles/main.scss'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello world</h1>
-    </div>
+    <>
+      <Login />
+
+    </>
   );
 }
 
