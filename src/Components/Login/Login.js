@@ -9,7 +9,23 @@ const Login = () => {
 							1 of 2
 						</div>
 						<div class="col">
-							2 of 2
+							<form onSubmit={e => userSignin(e)}>
+								<input
+									className="reg-form"
+									type="text"
+									placeholder="email"
+									// onChange={onHandle_Email}
+								/>
+
+								<input
+									className="reg-form"
+									type="password"
+									placeholder="password"
+									autoComplete="no"
+									// onChange={onHandle_Pwd}
+									// onKeyDown={userSignin}
+								/>
+							</form>
 						</div>
 					</div>
 				</div>

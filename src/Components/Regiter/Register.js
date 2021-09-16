@@ -8,7 +8,22 @@ const Register = () => {
 							1 of 2
 						</div>
 						<div class="col">
-							2 of 2
+							<form onSubmit={e => newUserRegistered(e)}>
+								<input
+									className="reg-form"
+									type="text"
+									placeholder="email"
+									// onChange={onHandleEmail}
+								/>
+								<input
+									className="reg-form"
+									type="password"
+									placeholder="password"
+									autoComplete="on"
+									// onChange={onHandlePwd}
+									// onKeyDown={newUserRegistered}
+								/>
+							</form>
 						</div>
 					</div>
 				</div>
