@@ -8,24 +8,29 @@ const Login = () => {
 						<div class="col home__box-rg">
 							1 of 2
 						</div>
-						<div class="col">
-							<form onSubmit={e => userSignin(e)}>
-								<input
-									className="reg-form"
-									type="text"
-									placeholder="email"
-									// onChange={onHandle_Email}
-								/>
+						<div class="col home__box-lft">
+							{/* <form onSubmit={e => userSignin(e)}> */}
+							<div className="form-box">
 
-								<input
-									className="reg-form"
-									type="password"
-									placeholder="password"
-									autoComplete="no"
+								<form>
+
+									<input
+										className="form-box__inputs"
+										type="text"
+										placeholder="email"
+									// onChange={onHandle_Email}
+									/>
+
+									<input
+										className="form-box__inputs"
+										type="password"
+										placeholder="password"
+										autoComplete="no"
 									// onChange={onHandle_Pwd}
 									// onKeyDown={userSignin}
-								/>
-							</form>
+									/>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>

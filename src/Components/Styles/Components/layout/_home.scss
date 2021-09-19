@@ -3,11 +3,11 @@
 	background-color: $color-baground;
 	position: relative;
 	// color: black;
-	&__box{
+	&__box {
 		position: relative;
 
 		// color: black;
-		background-color: rgb(255, 105, 180);
+		// background-color: rgb(255, 105, 180);
 		top: 50%;
 		left: 50%;
 		// height: 60rem;
@@ -18,18 +18,19 @@
 		box-shadow: 0 1rem 2rem rgba(#000, 0.9);
 		overflow: hidden;
 
-
-		&-rg{
-			box-shadow: 0 1rem 2rem rgba(#000, 0.5);
-			background-color: rgba(0, 0, 0, 0.37);
+		&-rg {
+			// box-shadow: 0 1rem 2rem rgba(#000, 0.5);
+			// background-color: rgba(0, 0, 0, 0.37);
 			height: 60rem;
 			width: 30rem;
-			
 		}
-		&-lft{
-			
-			height: 60rem;
+		&-lft {
+			position: relative;
+			// height: 60rem;
+			align-items: center;
+			text-align: center;
 			// background-color: chocolate;
+			background-color: #73c91d;
 		}
 	}
 }

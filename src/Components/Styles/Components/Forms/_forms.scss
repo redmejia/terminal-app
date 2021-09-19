@@ -1,0 +1,81 @@
+.form-box {
+	// height: 20rem;
+	width: 40rem;
+	// background-color: black;
+
+	position: absolute;
+
+	top: 10%;
+	right: -25%;
+
+	margin-top: 34rem;
+	transform: translate(-50%, -50%);
+
+	// background-color: #2e3436;
+
+	// background-color: #2e3436;
+
+
+	// &__inputs {
+	// 	padding: 12px 30px;
+	// 	margin: 9px 0;
+	// 	box-sizing: border-box;
+	// 	border: none;
+	// 	// color: white;
+
+	// 	color: black;
+
+
+
+	// 	// font-weight: 600;
+	// 	font-size: 1.9rem;
+	// 	// border-bottom: 2px solid #73c91d;
+	// 	// background-color: #2e3436;
+
+	// 	border-bottom: 2px solid transparent;
+
+
+	// 	border: none;
+
+	// }
+
+	// background-color: #73c91d;
+
+
+
+	&__inputs{
+		font-size: 1.5rem;
+		font-family: inherit; // inherit the font family set for the page
+		color: inherit;
+		padding: 1rem 2rem;
+		border-radius: 2px;
+		background-color: #73c91d;
+		border: none;
+		border-bottom: 3px solid transparent;
+		width: 40rem;
+		display: block;
+		transition: all 0.3s;
+
+
+		transition: all 0.3s;
+
+		// for get ridd off the blue line on form
+		&:focus {
+			outline: none;
+			box-shadow: 0 1rem 2rem rgba(#000, 0.5);
+			border-bottom: 3px solid black;
+		}
+
+		&:focus:invalid {
+			border-bottom: 3px solid black;
+		}
+
+		// psudo element
+		&::-webkit-input-placeholder {
+			color: black;
+		}
+	}
+
+
+}
+
