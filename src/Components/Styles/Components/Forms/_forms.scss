@@ -49,15 +49,20 @@
 		color: inherit;
 		padding: 1rem 2rem;
 		border-radius: 2px;
-		background-color: #73c91d;
+		// background-color: #73c91d;
+		background-color: #73c91d23;
+
 		border: none;
 		border-bottom: 3px solid transparent;
 		width: 40rem;
 		display: block;
 		transition: all 0.3s;
 
+		margin-bottom: 1.5rem;
 
 		transition: all 0.3s;
+
+		color: black;
 
 		// for get ridd off the blue line on form
 		&:focus {

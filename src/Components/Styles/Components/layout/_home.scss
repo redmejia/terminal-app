@@ -1,6 +1,7 @@
 .home {
 	height: 100vh;
-	background-color: $color-baground;
+	// background-color: $color-baground;
+	background-image: url(../../../../assets/home_back_1.jpg);
 	position: relative;
 	// color: black;
 	&__box {
@@ -15,7 +16,7 @@
 		border-radius: 2%;
 		transform: translate(-50%, -50%);
 		// filter: blur(.09rem);
-		box-shadow: 0 1rem 2rem rgba(#000, 0.9);
+		box-shadow: 0 1rem 2rem rgba(#fff, 0.2);
 		overflow: hidden;
 
 		&-rg {
@@ -30,7 +31,7 @@
 			align-items: center;
 			text-align: center;
 			// background-color: chocolate;
-			background-color: #73c91d;
+			background-color: #73c91d3f;
 		}
 	}
 }
