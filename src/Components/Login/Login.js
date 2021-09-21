@@ -6,7 +6,7 @@ const Login = () => {
 				<div class="container">
 					<div class="row">
 						<div class="col home__box-rg">
-							1 of 2
+							<img width="80" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/iterm2.svg" />
 						</div>
 						<div class="col home__box-lft">
 							{/* <form onSubmit={e => userSignin(e)}> */}

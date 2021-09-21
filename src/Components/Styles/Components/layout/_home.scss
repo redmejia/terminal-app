@@ -1,7 +1,7 @@
 .home {
 	height: 100vh;
-	// background-color: $color-baground;
-	background-image: url(../../../../assets/home_back_1.jpg);
+	background-color: rgba(0, 0, 0, 0.712);
+	// background-image: url(../../../../assets/home_back_1.jpg);
 	position: relative;
 	// color: black;
 	&__box {
@@ -24,14 +24,15 @@
 			// background-color: rgba(0, 0, 0, 0.37);
 			height: 60rem;
 			width: 30rem;
+			align-items: center;
+			
+			// transform: translate(-50%, -50%);
 		}
 		&-lft {
 			position: relative;
-			// height: 60rem;
 			align-items: center;
 			text-align: center;
-			// background-color: chocolate;
-			background-color: #73c91d3f;
+			background-color: #61aa17ee;
 		}
 	}
 }
