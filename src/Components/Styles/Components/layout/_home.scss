@@ -3,35 +3,45 @@
 	background-color: rgba(0, 0, 0, 0.712);
 	// background-image: url(../../../../assets/home_back_1.jpg);
 	position: relative;
-	// color: black;
+	// color: red;
+
 	&__box {
 		position: relative;
 
-		// color: black;
-		// background-color: rgb(255, 105, 180);
 		top: 50%;
 		left: 50%;
-		// height: 60rem;
+
+		height: 60rem;
 		width: 100rem;
 		border-radius: 2%;
 		transform: translate(-50%, -50%);
-		// filter: blur(.09rem);
+
 		box-shadow: 0 1rem 2rem rgba(#fff, 0.2);
 		overflow: hidden;
 
 		&-rg {
-			// box-shadow: 0 1rem 2rem rgba(#000, 0.5);
-			// background-color: rgba(0, 0, 0, 0.37);
 			height: 60rem;
-			width: 30rem;
-			align-items: center;
-			
-			// transform: translate(-50%, -50%);
+			position: relative;
+
+			// align-items: center;
+			// text-align: center;
+
+			// align-items: center;
+			// text-align: center;
+			// background-image: url(../../../../assets/rgt-side.jpg);
+			// background-repeat: no-repeat;
+			// background-size: contain;
 		}
 		&-lft {
+			background-image: url(../../../../assets/rgt-side.jpg);
+			background-repeat: no-repeat;
+			background-size: contain;
+
+			height: 60rem;
+			color: red;
 			position: relative;
-			align-items: center;
-			text-align: center;
+			// align-items: center;
+			// text-align: center;
 			background-color: #61aa17ee;
 		}
 	}
