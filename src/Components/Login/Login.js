@@ -14,8 +14,8 @@ const Login = () => {
 						<div className="side-box">
 							<img width="180" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/iterm2.svg" alt="logo" />
 						</div> */}
-						<img width="180" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/iterm2.svg" alt="logo" />
-						<div className="form-box">
+						{/* <img width="180" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/iterm2.svg" alt="logo" /> */}
+						{/* <div className="form-box"> */}
 
 							<h2 className="heading-primary"> Hello World</h2>
 
@@ -24,7 +24,7 @@ const Login = () => {
 							<h3 className="heading-secundary">More than <span className="remark-text"> {data.projects} </span> projects</h3>
 							<h3 className="heading-secundary">More than <span className="remark-text"> {data.topProjects} </span> top projects</h3>
 							<h3 className="heading-secundary">More than <span className="remark-text"> {data.developers} </span> developers colavorating</h3>
-						</div>
+						{/* </div> */}
 
 					</div>
 					<div class="col home__box-lft">

@@ -3,11 +3,14 @@
 
 	position: absolute;
 
-	top: 10%;
-	right: -25%;
+	top: 20%;
+	right: -15%;
 
-	margin-top: 34rem;
+	margin-top: 40rem;
+	
 	transform: translate(-50%, -50%);
+
+	// background-color: red;
 
 	&__inputs {
 		font-size: 1.5rem;
@@ -20,7 +23,7 @@
 
 		border: none;
 		border-bottom: 3px solid transparent;
-		width: 40rem;
+		width: 35rem;
 		display: block;
 		transition: all 0.3s;
 
