@@ -1,9 +1,11 @@
 .home {
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.712);
-	// background-image: url(../../../../assets/home_back_1.jpg);
+	background-image: url(../../../../assets/term_log.png);
+
+	background-size: cover;
+	background-position: top;
 	position: relative;
-	// color: red;
 
 	&__box {
 		position: relative;
@@ -11,38 +13,25 @@
 		top: 50%;
 		left: 50%;
 
-		height: 80rem;
-		width: 130rem;
-		border-radius: 2%;
-
+		height: 60rem;
+		width: 120rem;
 		transform: translate(-50%, -50%);
+
+		border-radius: 2%;
 
 		box-shadow: 0 1rem 2rem rgba(#fff, 0.2);
 		overflow: hidden;
 
-		&-rg {
-			height: 80rem;
-			position: relative;
+		background-color: #61aa17ee;
+		// position: relative;
 
-			// align-items: center;
-			// text-align: center;
-
-			// align-items: center;
-			// text-align: center;
-			// background-image: url(../../../../assets/rgt-side.jpg);
-			// background-repeat: no-repeat;
-			// background-size: contain;
-		}
-		&-lft {
-			// background-image: url(../../../../assets/rgt-side.jpg);
-			background-repeat: no-repeat;
-			background-size: contain;
-
-			height: 80rem;
-			position: relative;
-			// align-items: center;
-			// text-align: center;
-			background-color: #61aa17ee;
+		// form postion register and signin
+		&--form {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 	}
+
 }
