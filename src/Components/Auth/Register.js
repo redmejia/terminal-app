@@ -13,7 +13,7 @@ const Register = () => {
 							placeholder="email"
 						// onChange={onHandle_Email}
 						/>
-
+						
 						<input
 							className="form-box__inputs"
 							type="password"

@@ -1,0 +1,23 @@
+.project-box {
+	margin-top: 10rem;
+
+	position: absolute;
+	// align-items: center;
+	top: 50%; // from top
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+
+	&__scroll {
+		// position: relative;
+		height: 70rem;
+		position: relative;
+
+		overflow-wrap: scroll;
+		overflow-x: hidden;
+
+		padding-top: 34rem;
+		// margin-top: 20rem;
+		// background-color: red;
+	}
+}
