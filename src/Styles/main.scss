@@ -1,17 +1,19 @@
 @import "Components/Variables/variables";
 // @import "Components/Variables/mixins";
 
+// fonts paragraph title and subtitles
 @import "Components/typography/typography";
 
 @import "Components/Base/base";
 
+// registers and login
 @import "Components/layout/home";
 // @import "Components/layout/grid";
 
-
+// form register, login and projects
 @import "Components/Forms/forms";
 
+// utilities button, cards scrolls
 @import "Components/Utils/card";
 @import "Components/Utils/scroll";
-
-
+@import "Components/Utils/button";
