@@ -1,8 +1,7 @@
 import sample from "../../assets/term_log.png"
 const Card = (props) => {
 	return (
-
-		<div className="card" style={{ width: props.viewSize }} >
+		<div className="card" >
 			<img className="card-img-top" src={sample} alt="sample" />
 			<div className="card-body">
 				<h5 className="card-title">{props.title}</h5>

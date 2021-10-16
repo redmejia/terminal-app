@@ -9,39 +9,39 @@ const Projects = () => {
 
 
 				<Card
-					viewSize="90rem"
+		
 					title="hello world."
 					description="this is a test."
 				/>
 
 				<Card
-					viewSize="90rem"
+					
 					title="hello"
 					description="this is a test."
 				/>
 
 
 				<Card
-					viewSize="90rem"
+					
 					title="hello"
 					description="this is a test."
 				/>
 
 
 				<Card
-					viewSize="90rem"
+					
 					title="hello"
 					description="this is a test."
 				/>
 
 				<Card
-					viewSize="90rem"
+					
 					title="hello"
 					description="this is a test."
 				/>
 
 				<Card
-					viewSize="90rem"
+					
 					title="hello"
 					description="this is a test."
 				/>
