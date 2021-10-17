@@ -4,6 +4,7 @@ import '../src/Styles/main.scss';
 // import Register from './Components/Auth/Register';
 
 import Projects from './Components/Pages/Projects';
+import VerticalNav from './Components/Pages/VerticalNav';
 // import TopProjects from './Components/Pages/TopProjects';
 
 function App() {
@@ -12,8 +13,9 @@ function App() {
       {/* <Login /> */}
       {/* <Register /> */}
 
-      <Projects />
 
+      <Projects />
+      <VerticalNav />
       {/* <TopProjects /> */}
     </>
   );

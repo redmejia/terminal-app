@@ -1,15 +1,18 @@
 .card {
 	width: 90rem;
 	position: relative;
-	// background-color: aqua;
 	// padding-top: 90rem;
 	margin-top: 3rem;
 
 	left: 50%;
 	transform: translate(-50%, -50%);
+	border: none;
+	// overflow: hidden;
 	&-body {
 		height: 15rem;
-		// background-color: black;
-		background-color: #00000033;
+
+		background-color: $color-black-default-2;
+		border: none;
+		overflow: hidden;
 	}
 }

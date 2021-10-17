@@ -1,0 +1,53 @@
+.vertical-nav {
+	position: relative;
+	list-style: none;
+	width: 25rem;
+
+	// border-radius: 5%;
+
+
+	margin: 0;
+	padding: 0;
+	margin-top: 10rem;
+	margin-left: 5rem;
+	text-transform: uppercase;
+
+
+
+	font-weight: 500;
+	background-color: $color-black-default-4;
+
+	&__list {
+		display: block;
+
+		padding: 8px 16px;
+		font-size: 2rem;
+
+		&--link {
+			text-decoration: none;
+			color: $color-green-default-1;
+			font-size: 2rem;
+
+			cursor: pointer;
+
+			&:visited {
+				text-decoration: none;
+				color: $color-green-default-1;
+			}
+			&:focus-visible {
+				text-decoration: none;
+				color: $color-green-default-1;
+			}
+		}
+
+		&:hover {
+			background-color: $color-green-default-4;
+
+			color: $color-green-default-1;
+			font-size: 2.8rem;
+			cursor: pointer;
+
+			font-weight: 500;
+		}
+	}
+}

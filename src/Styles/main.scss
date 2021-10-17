@@ -1,13 +1,16 @@
 @import "Components/Variables/variables";
 // @import "Components/Variables/mixins";
 
+
 // fonts paragraph title and subtitles
 @import "Components/typography/typography";
 
 @import "Components/Base/base";
 
-// registers and login
+// pages layou
 @import "Components/layout/home";
+@import "Components/layout/vertical_nav";
+
 // @import "Components/layout/grid";
 
 // form register, login and projects

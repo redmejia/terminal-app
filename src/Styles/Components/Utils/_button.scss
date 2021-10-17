@@ -6,34 +6,42 @@
 	cursor: pointer;
 	font-weight: 800;
 
+	background-color: $color-black-default-4;
+
 	// default color
 	&--green {
-		border-radius: 50%;
+		// border-radius: 15%;
 
-		color: #5FA31A;
+		color: $color-green-default-2;
+
 		font-size: 2.5rem;
 
 		&:hover {
 			transform: translateX(5px);
-			background-color: #5fa31a63;
-			color: #5fa31a;
+			// background-color: $color-green-default-2;
+			background-color: $color-green-default-4;
+
+
+			color: $color-green-default-1;
+
 			font-size: 2.9rem;
-			box-shadow: 0 1rem 2rem rgba(#5fa31a, 0.2);
+			
+			// box-shadow: 0 1rem 2rem rgba($color-green-default-2, 0.6);
 		}
 	}
 
 	// delete button
 	&--red-delete {
-		color: red;
+		color: $color-red-danger;
 		font-size: 2.5rem;
 		border-radius: 5%;
 
 		&:hover {
 			transform: translateX(5px);
-			color: #ff0000;
-			background-color: rgba(255, 0, 0, 0.397);
+			color: $color-red-danger;
+			background-color: $color-red-danger-2;
 			font-size: 2.9rem;
-			box-shadow: 0 1rem 2rem rgba(#ff0000, 0.2);
+			// box-shadow: 0 1rem 2rem rgba($color-red-danger, 0.2);
 		}
 	}
 }
