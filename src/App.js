@@ -1,11 +1,12 @@
-import '../src/Styles/main.scss';
 // import './App.scss';
 // import Login from './Components/Login/Login';
 // import Register from './Components/Auth/Register';
 
 import Projects from './Components/Pages/Projects';
+import TopNavigation from './Components/Pages/TopNavigation';
 import VerticalNav from './Components/Pages/VerticalNav';
 // import TopProjects from './Components/Pages/TopProjects';
+import '../src/Styles/main.scss';
 
 function App() {
   return (
@@ -13,9 +14,9 @@ function App() {
       {/* <Login /> */}
       {/* <Register /> */}
 
-
-      <Projects />
+      <TopNavigation />
       <VerticalNav />
+      <Projects />
       {/* <TopProjects /> */}
     </>
   );

@@ -7,7 +7,7 @@ const Card = (props) => {
 				<h5 className="heading-primary">{props.title}</h5>
 				<p className="heading-secundary">{props.description}</p>
 				{/* <a href="#" className="btn btn-primary">++</a> */}
-				<a  href="#/" className="btn btn--green">++</a>
+				<a href="#/" className="btn btn--green">++</a>
 			</div>
 		</div>
 	);

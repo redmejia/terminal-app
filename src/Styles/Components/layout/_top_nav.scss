@@ -1,0 +1,56 @@
+.top-nav {
+	position: relative;
+	list-style: none;
+
+	height: 8rem;
+	margin: 0;
+	padding: 0;
+
+	background-color: $color-black-default-2;
+	margin-bottom: 2rem;
+	
+
+	// developer side
+	&--dev {
+		display: block;
+		align-items: center;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		float: right;
+	}
+
+	// left side
+	&--logo {
+		display: block;
+
+		width: 4rem;
+		height: 4rem;
+
+		margin-left: 5rem;
+
+
+		background-image: url(../../../assets/term-s-3.png);
+		background-size: cover;
+		display: block;
+
+		align-items: center;
+		text-align: center;
+		padding: 14px 16px;
+		float: left;
+	}
+}
+
+.drop-box{
+	background-color: $color-black-default-2;
+	color: $color-green-default-1;
+	font-size: 2rem;
+	font-weight: 900;
+	width: 30rem;
+
+	&:hover{
+		cursor: pointer;
+	}
+
+	
+}
