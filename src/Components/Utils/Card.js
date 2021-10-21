@@ -5,7 +5,7 @@ const Card = (props) => {
 			<img className="card-img-top" src={sample} alt="sample" />
 			<div className="card-body">
 				<h5 className="heading-primary">{props.title}</h5>
-				<p className="heading-secundary">{props.description}</p>
+				<p className="paragraph">{props.description}</p>
 				{/* <a href="#" className="btn btn-primary">++</a> */}
 				<a href="#/" className="btn btn--green">++</a>
 			</div>

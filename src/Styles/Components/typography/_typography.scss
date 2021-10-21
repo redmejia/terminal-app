@@ -8,8 +8,7 @@
 	margin-bottom: 2rem;
 
 	text-align: center;
-	align-items: center
-
+	align-items: center;
 }
 
 .heading-secundary {
@@ -23,13 +22,19 @@
 	// color: red;
 }
 
-.text{
-	color:#73c91d;
+.paragraph {
+	font-size: 1.3rem;
+	font-weight: 400;
+	color: black;
+}
+
+.text {
+	color: #73c91d;
 	font-weight: 600;
 	font-size: 1.6rem;
 	margin-left: 1rem;
 }
 
-.remark-text{
+.remark-text {
 	color: black;
 }
