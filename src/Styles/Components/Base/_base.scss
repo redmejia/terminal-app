@@ -11,11 +11,10 @@ html {
 }
 
 body {
-	font-family: -apple-system, BlinkMacSystemFont, "Ubuntu", "monospace", "Segoe UI", "Roboto", "Oxygen",
-		"Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Ubuntu", "monospace", "Segoe UI", "Roboto", "Oxygen", "Cantarell",
+		"Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
 
 	background-color: $color-black-default-2;
 }
