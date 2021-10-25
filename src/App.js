@@ -9,21 +9,34 @@ import VerticalNav from './Components/Pages/VerticalNav';
 import '../src/Styles/main.scss';
 import DevProfile from './Components/Pages/DevProfile';
 
-function App() {
-  return (
-    <>
-      {/* <Login /> */}
-      {/* <Register /> */}
+import {useDispatch, useSelector} from 'react-redux'
 
-      <TopNavigation />
+import { useEffect } from 'react';
+import { getAllProjects } from '../src/features/projects/projects'
+
+const App = () => {
+  const dispatch = useDispatch()
+  const { projects } = useSelector(state => state.projects);
+  useEffect(() => {
+    dispatch(getAllProjects())
+}, [getAllProjects])
+
+console.log(projects);
+return (
+  <>
+
+    {/* <Login /> */}
+    {/* <Register /> */}
+
+    {/* <TopNavigation />
       <VerticalNav />
-      <DevProfile />
+      <DevProfile /> */}
 
 
-      {/* <Projects /> */}
-      {/* <TopProjects /> */}
-    </>
-  );
+    {/* <Projects /> */}
+    {/* <TopProjects /> */}
+  </>
+);
 }
 
 export default App;
