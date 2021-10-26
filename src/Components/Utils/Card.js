@@ -10,7 +10,8 @@ const Card = (props) => {
 				<p className="title" >{props.title}</p>
 				<p className="paragraph">{props.description}</p>
 				{/* <a href="#" className="btn btn-primary">++</a> */}
-				<a href="#/" className="btn btn--green">++</a>
+				<a href="#/" className="btn btn--green"> ++ </a>
+				<p className="btn btn--like"> {props.like}</p>
 			</div>
 		</div>
 	);
