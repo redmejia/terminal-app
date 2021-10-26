@@ -2,41 +2,30 @@
 // import Login from './Components/Login/Login';
 // import Register from './Components/Auth/Register';
 
-// import Projects from './Components/Pages/Projects';
 import TopNavigation from './Components/Pages/TopNavigation';
 import VerticalNav from './Components/Pages/VerticalNav';
+import Projects from './Components/Pages/Projects';
 // import TopProjects from './Components/Pages/TopProjects';
 import '../src/Styles/main.scss';
-import DevProfile from './Components/Pages/DevProfile';
-
-import {useDispatch, useSelector} from 'react-redux'
-
-import { useEffect } from 'react';
-import { getAllProjects } from '../src/features/projects/projects'
+// import DevProfile from './Components/Pages/DevProfile';
 
 const App = () => {
-  const dispatch = useDispatch()
-  const { projects } = useSelector(state => state.projects);
-  useEffect(() => {
-    dispatch(getAllProjects())
-}, [getAllProjects])
+ 
+  return (
+    <>
 
-console.log(projects);
-return (
-  <>
+      {/* <Login /> */}
+      {/* <Register /> */}
 
-    {/* <Login /> */}
-    {/* <Register /> */}
-
-    {/* <TopNavigation />
+      <TopNavigation />
       <VerticalNav />
-      <DevProfile /> */}
+      {/* <DevProfile /> */}
 
 
-    {/* <Projects /> */}
-    {/* <TopProjects /> */}
-  </>
-);
+      <Projects />
+      {/* <TopProjects /> */}
+    </>
+  );
 }
 
 export default App;

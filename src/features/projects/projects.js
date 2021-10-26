@@ -17,7 +17,7 @@ const { getProjects } = projectSlice.actions
 
 export const getAllProjects = () => {
 	return (dispatch) => {
-		return fetch('http://127.0.0.1:8080/project', {
+		fetch('http://127.0.0.1:8080/project', {
 			method : 'GET',
 			headers: {
                 'Content-Type': 'application/json',

@@ -5,6 +5,8 @@ const Card = (props) => {
 			<img className="card-img-top" src={sample} alt="sample" />
 			<div className="card-body">
 				{/* <h5 className="heading-primary">{props.title}</h5> */}
+				<p >{props.created}</p>
+				<p >{props.created_by}</p>
 				<p className="title" >{props.title}</p>
 				<p className="paragraph">{props.description}</p>
 				{/* <a href="#" className="btn btn-primary">++</a> */}
