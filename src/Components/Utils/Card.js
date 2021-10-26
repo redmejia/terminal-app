@@ -5,15 +5,18 @@ const Card = (props) => {
 			<img className="card-img-top" src={sample} alt="sample" />
 			<div className="card-body">
 				{/* <h5 className="heading-primary">{props.title}</h5> */}
-				<p >{props.created}</p>
-				<p >{props.created_by}</p>
+				<p >
+				 	<em>@{props.created_by}</em>
+					<br></br>
+					{props.created}
+				</p>
 				<p className="title" >{props.title}</p>
 				<p className="paragraph">{props.description}</p>
 				{/* <a href="#" className="btn btn-primary">++</a> */}
 				<a href="#/" className="btn btn--green"> ++ </a>
 				<p className="btn btn--like"> {props.like}</p>
 			</div>
-		</div>
+		</div >
 	);
 }
 
