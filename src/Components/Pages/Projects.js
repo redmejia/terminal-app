@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Card from "../Utils/Card";
 import Scroll from "../Utils/Scroll";
 
-import { getAllProjects } from '../../../src/features/projects/projects'
+import { getAllProjects, createProject } from '../../../src/features/projects/projects'
 
 const Projects = () => {
 	const dispatch = useDispatch()
@@ -13,6 +13,23 @@ const Projects = () => {
 	useEffect(() => {
 		dispatch(getAllProjects())
 	}, [dispatch])
+
+	// const run = () =>{
+	// 	const dummy_data = {
+	// 		"dev_id" : 4,
+	// 		"created_by" : "THIS IS A TES FROM FRONT END",
+	// 		"project_name" : "I am lein",
+	// 		"project_description" : "This is leie",
+	// 		"project_repo" : "http://github.com/lien",
+	// 		"project_live" : "http://live.com/lien"
+	// 	}
+	
+	// 	dispatch(createProject(dummy_data))
+
+	// }
+
+	// run()
+
 
 	return (
 		<>
