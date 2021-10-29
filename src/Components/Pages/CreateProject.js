@@ -4,38 +4,50 @@ const CreateProject = () => {
 		<>
 
 			{/* <h2 className="heading-primary"> Register </h2> */}
-			<form>
+			<div className="home">
+				<div className="home_box">
 
-				<input
-					className="form-box__inputs"
-					type="text"
-					placeholder="project name"
-				// onChange={onHandle_Email}
-				/>
+					<div className="box-project">
+						<h1 style={{color:"blue"}}>Create New project</h1>
+						<form>
 
-				<input
-					className="form-box__inputs"
-					type="text"
+							<input
+								className="box-project__inputs"
+								type="text"
+								placeholder="project name"
+							// onChange={onHandle_Email}
+							/>
 
-					placeholder="git repo"
-				// onChange={onHandle_Email}
-				/>
+							<textarea
+								className="box-project__inputs"
+								// rows="20"
+								// cols="74"
+								placeholder="decription"
 
-				<input
-					className="form-box__inputs"
-					type="text"
-					placeholder="live"
-				// onChange={onHandle_Email}
-				/>
+							/>
 
-				<input
-					className="form-box__inputs"
-					rows="4"
-					cols="74"
-					placeholder="decription"
+							<input
 
-				/>
-			</form>
+								className="box-project__inputs"
+								type="text"
+
+								placeholder="git repo"
+							// onChange={onHandle_Email}
+							/>
+
+							<input
+
+								className="box-project__inputs"
+								type="text"
+								placeholder="live"
+							// onChange={onHandle_Email}
+							/>
+
+						</form>
+					</div>
+				</div>
+
+			</div>
 		</>
 		// <div className="home">
 		// 	<div className="home__box">
