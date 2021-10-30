@@ -8,7 +8,7 @@ const CreateProject = () => {
 				<div className="home_box">
 
 					<div className="box-project">
-						<h1 style={{color:"blue"}}>Create New project</h1>
+						<h1 style={{color:"black"}}>Create New project</h1>
 						<form>
 
 							<input
@@ -20,8 +20,8 @@ const CreateProject = () => {
 
 							<textarea
 								className="box-project__inputs"
-								// rows="20"
-								// cols="74"
+								rows="20"
+								cols="74"
 								placeholder="decription"
 
 							/>

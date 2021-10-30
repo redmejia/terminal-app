@@ -14,6 +14,7 @@ const TopNavigation = () => {
 					<ul className="dropdown-menu  drop-box" aria-labelledby="dropdownMenuLink">
 						
 						<li>New++</li>
+						<li>My profile</li>
 						<hr />
 						<li>Log out</li>
 					</ul>

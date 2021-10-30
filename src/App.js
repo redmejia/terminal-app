@@ -20,7 +20,7 @@ const App = () => {
       {/* <Register /> */}
 
       <TopNavigation />
-      <VerticalNav />
+      {/* <VerticalNav /> */}
       {/* <DevProfile /> */}
 
       <CreateProject />
