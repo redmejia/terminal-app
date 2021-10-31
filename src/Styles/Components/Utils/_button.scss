@@ -33,6 +33,30 @@
 		}
 	}
 
+	&--green-lg {
+		// border-radius: 15%;
+
+		color: $color-green-default-2;
+		background-color: $color-black-default-4;
+
+		font-size: 2.5rem;
+		width: 10rem;
+		border-radius: 8rem;
+		padding-left: 1.5rem;
+
+		&:hover {
+			transform: translateX(5px);
+			// background-color: $color-green-default-2;
+			background-color: $color-green-default-3;
+
+			color: $color-green-default-1;
+
+			// font-size: 2.9rem;
+
+			// box-shadow: 0 1rem 2rem rgba($color-green-default-2, 0.6);
+		}
+	}
+
 	&--green-dev {
 		background-color: $color-green-default-2;
 	}
@@ -40,17 +64,42 @@
 	// delete button
 	&--red-delete {
 		color: $color-red-danger;
+
+		background-color: $color-black-default-4;
+
 		font-size: 2.5rem;
 		border-radius: 5%;
+		border-radius: 8rem;
+
 
 		&:hover {
 			transform: translateX(5px);
 			color: $color-red-danger;
 			background-color: $color-red-danger-2;
-			font-size: 2.9rem;
 			// box-shadow: 0 1rem 2rem rgba($color-red-danger, 0.2);
 		}
 	}
+
+
+	&--red-delete-lg {
+		color: $color-red-danger;
+
+		background-color: $color-black-default-4;
+
+		font-size: 2.5rem;
+		width: 10rem;
+		border-radius: 8rem;
+		// padding-left: 1.9rem;
+		margin-left: 1.9rem;
+
+		&:hover {
+			transform: translateX(5px);
+			color: $color-red-danger;
+			background-color: $color-red-danger-2;
+		}
+	}
+
+
 
 	&--like {
 		// height: 4rem;

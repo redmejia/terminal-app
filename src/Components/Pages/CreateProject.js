@@ -1,4 +1,23 @@
+import { useState } from "react";
+
 const CreateProject = () => {
+	const [projectName, setProjectName] = useState("");
+	const [projectDescription, setProjectDescription] = useState("");
+	const [projectRepo, setProjectRepo] = useState("");
+	const [projectLive, setProjectLive] = useState("");
+
+	const data = {
+		project_name: projectName,
+		project_description: projectDescription,
+		project_repo: projectRepo,
+		project_live: projectLive,
+	}
+
+
+	const newProject = () => {
+		console.log(data);
+	}
+
 	return (
 
 		<>
@@ -8,14 +27,14 @@ const CreateProject = () => {
 				<div className="home_box">
 
 					<div className="box-project">
-						<h1 style={{color:"black"}}>Create New project</h1>
-						<form>
+						<h1 style={{ color: "black" }}>Create New project</h1>
+						<form >
 
 							<input
 								className="box-project__inputs"
 								type="text"
 								placeholder="project name"
-							// onChange={onHandle_Email}
+								onChange={(e) => setProjectName(e.target.value)}
 							/>
 
 							<textarea
@@ -23,6 +42,8 @@ const CreateProject = () => {
 								rows="20"
 								cols="74"
 								placeholder="decription"
+								onChange={(e) => setProjectDescription(e.target.value)}
+
 
 							/>
 
@@ -32,7 +53,8 @@ const CreateProject = () => {
 								type="text"
 
 								placeholder="git repo"
-							// onChange={onHandle_Email}
+								onChange={(e) => setProjectRepo(e.target.value)}
+
 							/>
 
 							<input
@@ -40,10 +62,13 @@ const CreateProject = () => {
 								className="box-project__inputs"
 								type="text"
 								placeholder="live"
-							// onChange={onHandle_Email}
+								onChange={(e) => setProjectLive(e.target.value)}
+
 							/>
 
 						</form>
+						<a href="#/" className="btn btn--green-lg" onClick={newProject}> create </a>
+						<a href="#/" className="btn btn--red-delete-lg"> 	&crarr;  </a>
 					</div>
 				</div>
 
