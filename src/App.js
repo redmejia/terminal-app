@@ -20,12 +20,12 @@ const App = () => {
       {/* <Register /> */}
 
       <TopNavigation />
-      {/* <VerticalNav /> */}
+      <VerticalNav />
       {/* <DevProfile /> */}
 
-      <CreateProject />
+      {/* <CreateProject /> */}
 
-      {/* <Projects /> */}
+      <Projects />
       {/* <TopProjects /> */}
     </>
   );

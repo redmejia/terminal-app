@@ -12,14 +12,15 @@ const CreateProject = () => {
 	const [projectRepo, setProjectRepo] = useState("");
 	const [projectLive, setProjectLive] = useState("");
 
-	let d = new Date();
-	let timestamp = d.getTime();
+	// let d = new Date();
+	// let timestamp = d.getTime();
 
 	const data = {
 		dev_id: 53,
 		project_name: projectName,
 		project_description: projectDescription,
-		created: Math.round(timestamp / 1000),
+		created_by : "rey", // get the user from sigin
+		// created: Math.round(timestamp / 1000), // 
 		project_repo: projectRepo,
 		project_live: projectLive,
 	}

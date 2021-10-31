@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Card from "../Utils/Card";
 import Scroll from "../Utils/Scroll";
 
-import { getAllProjects, createProject } from '../../../src/features/projects/projects'
+import { getAllProjects } from '../../../src/features/projects/projects'
 
 const Projects = () => {
 	const dispatch = useDispatch()
@@ -14,6 +14,7 @@ const Projects = () => {
 		dispatch(getAllProjects())
 	}, [dispatch])
 
+	
 	// const run = () =>{
 	// 	const dummy_data = {
 	// 		"dev_id" : 4,
