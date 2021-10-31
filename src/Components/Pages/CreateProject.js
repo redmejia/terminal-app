@@ -1,28 +1,37 @@
 import { useState } from "react";
 
+import { useDispatch } from 'react-redux'
+import { createProject } from '../../../src/features/projects/projects'
+
+
 const CreateProject = () => {
+	const dispatch = useDispatch()
+
 	const [projectName, setProjectName] = useState("");
 	const [projectDescription, setProjectDescription] = useState("");
 	const [projectRepo, setProjectRepo] = useState("");
 	const [projectLive, setProjectLive] = useState("");
 
+	let d = new Date();
+	let timestamp = d.getTime();
+
 	const data = {
+		dev_id: 53,
 		project_name: projectName,
 		project_description: projectDescription,
+		created: Math.round(timestamp / 1000),
 		project_repo: projectRepo,
 		project_live: projectLive,
 	}
 
 
 	const newProject = () => {
-		console.log(data);
+		dispatch(createProject(data))
 	}
 
 	return (
 
 		<>
-
-			{/* <h2 className="heading-primary"> Register </h2> */}
 			<div className="home">
 				<div className="home_box">
 
@@ -43,44 +52,30 @@ const CreateProject = () => {
 								cols="74"
 								placeholder="decription"
 								onChange={(e) => setProjectDescription(e.target.value)}
-
-
 							/>
 
 							<input
-
 								className="box-project__inputs"
 								type="text"
 
 								placeholder="git repo"
 								onChange={(e) => setProjectRepo(e.target.value)}
-
 							/>
 
 							<input
-
 								className="box-project__inputs"
 								type="text"
 								placeholder="live"
 								onChange={(e) => setProjectLive(e.target.value)}
-
 							/>
-
 						</form>
-						<a href="#/" className="btn btn--green-lg" onClick={newProject}> create </a>
-						<a href="#/" className="btn btn--red-delete-lg"> 	&crarr;  </a>
+						<a href="#/" className="btn btn--green-lg" onClick={() => newProject()}> create </a>
+						<a href="#/" className="btn btn--red-delete-lg">&crarr;</a>
 					</div>
 				</div>
 
 			</div>
 		</>
-		// <div className="home">
-		// 	<div className="home__box">
-		// 		<div class="home__box--form">
-		// 			{/* <form onSubmit={e => newUserRegistered(e)}> */}
-		// 		</div>
-		// 	</div>
-		// </div>
 	);
 }
 
