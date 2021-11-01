@@ -38,6 +38,7 @@ const CreateProject = () => {
 					<span style={{ marginLeft: "6px", marginTop: "4px", height: "25px", width: "25px", backgroundColor: "green", borderRadius: "50%", display: "inline-block" }}></span>
 					<span style={{ marginLeft: "6px", marginTop: "4px", height: "25px", width: "25px", backgroundColor: "yellow", borderRadius: "50%", display: "inline-block" }}></span>
 					<span style={{ marginLeft: "6px", marginTop: "4px", height: "25px", width: "25px", backgroundColor: "red", borderRadius: "50%", display: "inline-block" }}></span>
+					<hr style={{ color: "white" }} />
 					<div className="form--box">
 						<h1 style={{ color: "green" }}>Create New project</h1>
 						<form>

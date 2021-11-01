@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const TopNavigation = () => {
 	return (
@@ -13,10 +14,12 @@ const TopNavigation = () => {
 
 					<ul className="dropdown-menu  drop-box" aria-labelledby="dropdownMenuLink">
 						
-						<li>New++</li>
-						<li>My profile</li>
+						<li><Link to="/new-project">New Project ++</Link></li>
+						<li><Link to="/me">My Profile</Link></li>
+						{/* <li>My profile</li> */}
 						<hr />
-						<li>Log out</li>
+						<li><Link to="/">Log out</Link></li>
+						{/* <li>Log out</li> */}
 					</ul>
 				</div>
 			</li>
