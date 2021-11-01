@@ -1,27 +1,29 @@
+import Input from "../Utils/Input";
+
 const Register = () => {
 	return (
-		<div className="home">
-			<div className="home__box">
-				<div class="home__box--form">
-					{/* <form onSubmit={e => newUserRegistered(e)}> */}
-					<h2 className="heading-primary"> Register </h2>
-					<form>
+		<div className="form">
+			<div className="transparent-box">
+				<span style={{ marginLeft: "4px", marginTop: "4px", height: "25px", width: "25px", backgroundColor: "green", borderRadius: "50%", display: "inline-block" }}></span>
+				<span style={{ marginLeft: "4px", marginTop: "4px", height: "25px", width: "25px", backgroundColor: "yellow", borderRadius: "50%", display: "inline-block" }}></span>
+				<span style={{ marginLeft: "4px", marginTop: "4px", height: "25px", width: "25px", backgroundColor: "red", borderRadius: "50%", display: "inline-block" }}></span>
+				<div className="form--box">
+					<h1 style={{ color: "black" }}>Register</h1>
 
-						<input
-							className="form-box__inputs"
+					<form>
+						<Input
+							className="form--box__inputs"
 							type="text"
 							placeholder="email"
-						// onChange={onHandle_Email}
 						/>
-						
-						<input
-							className="form-box__inputs"
+
+						<Input
+							className="form--box__inputs"
 							type="password"
 							placeholder="password"
-							autoComplete="no"
-						// onChange={onHandle_Pwd}
-						// onKeyDown={userSignin}
 						/>
+						<a href="#/" className="btn btn--green-lg"> register </a>
+						{/* <a href="#/" className="btn btn--green-lg">register</a> */}
 					</form>
 				</div>
 			</div>

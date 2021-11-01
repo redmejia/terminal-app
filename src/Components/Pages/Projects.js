@@ -14,24 +14,6 @@ const Projects = () => {
 		dispatch(getAllProjects())
 	}, [dispatch])
 
-	
-	// const run = () =>{
-	// 	const dummy_data = {
-	// 		"dev_id" : 4,
-	// 		"created_by" : "THIS IS A TES FROM FRONT END",
-	// 		"project_name" : "I am lein",
-	// 		"project_description" : "This is leie",
-	// 		"project_repo" : "http://github.com/lien",
-	// 		"project_live" : "http://live.com/lien"
-	// 	}
-	
-	// 	dispatch(createProject(dummy_data))
-
-	// }
-
-	// run()
-
-
 	return (
 		<>
 			<Scroll>

@@ -1,27 +1,31 @@
-const Login = () => {
-	
-	return (
-		<div className="home">
-			<div className="home__box">
-				<div className="home__box--form">
-					<h2 className="heading-primary"> Log In </h2>
-					<form>
+import Input from "../Utils/Input";
 
-						<input
-							className="form-box__inputs"
+const Login = () => {
+
+	return (
+
+
+		<div className="form">
+			<div className="transparent-box">
+				<span style={{marginLeft:"4px", marginTop:"4px", height: "25px", width:"25px", backgroundColor:"green", borderRadius: "50%", display: "inline-block"}}></span>
+				<span style={{marginLeft:"4px", marginTop:"4px", height: "25px", width:"25px", backgroundColor:"yellow", borderRadius: "50%", display: "inline-block"}}></span>
+				<span style={{marginLeft:"4px", marginTop:"4px", height: "25px", width:"25px", backgroundColor:"red", borderRadius: "50%", display: "inline-block"}}></span>
+				<div className="form--box">
+					<h1 style={{ color: "black" }}>Log in</h1>
+					<form>
+						<Input
+							className="form--box__inputs"
 							type="text"
 							placeholder="email"
-						// onChange={onHandle_Email}
 						/>
 
-						<input
-							className="form-box__inputs"
+						<Input
+							className="form--box__inputs"
 							type="password"
 							placeholder="password"
-							autoComplete="no"
-						// onChange={onHandle_Pwd}
-						// onKeyDown={userSignin}
 						/>
+						<a href="#/" className="btn btn--green-lg"> log in </a>
+						{/* <a href="#/" className="btn btn--green-lg">register</a> */}
 					</form>
 				</div>
 			</div>

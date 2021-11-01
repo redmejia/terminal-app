@@ -1,6 +1,6 @@
 // import './App.scss';
 import Login from './Components/Auth/Login';
-// import Register from './Components/Auth/Register';
+import Register from './Components/Auth/Register';
 
 import TopNavigation from './Components/Pages/TopNavigation';
 import VerticalNav from './Components/Pages/VerticalNav';
@@ -16,16 +16,16 @@ const App = () => {
   return (
     <>
 
+      {/* <TopNavigation /> */}
       {/* <Login /> */}
       {/* <Register /> */}
 
-      <TopNavigation />
-      <VerticalNav />
+      {/* <VerticalNav /> */}
       {/* <DevProfile /> */}
 
-      {/* <CreateProject /> */}
+      <CreateProject />
 
-      <Projects />
+      {/* <Projects /> */}
       {/* <TopProjects /> */}
     </>
   );
