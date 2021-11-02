@@ -10,13 +10,17 @@ const projectSlice = createSlice({
 		},
 		createNewProject: (state, action) => {
 			return [state.projects, { ...action.payload }]
+		},
+		clearProjectState : (state) => {
+			state.projects = []
 		}
+
 	}
 })
 
 export default projectSlice.reducer
 
-const { getProjects, createNewProject } = projectSlice.actions
+const { getProjects, createNewProject, clearProjectState } = projectSlice.actions
 
 export const getAllProjects = () => {
 	return (dispatch) => {
@@ -39,5 +43,11 @@ export const createProject = (project) => {
 			body: JSON.stringify(project)
 		})
 		dispatch(createNewProject(project))
+	}
+}
+
+export const logOutClearProjects = () => {
+	return (dispatch) => {
+		dispatch(clearProjectState())
 	}
 }

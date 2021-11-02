@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector, clear } from 'react-redux'
 import { newRegister } from "../../features/developers/devs";
 import { useHistory } from "react-router-dom";
 import Input from "../Utils/Input";
@@ -10,22 +10,22 @@ import Input from "../Utils/Input";
 const Register = () => {
 	let history = useHistory()
 	const dispatch = useDispatch();
-	const { register } = useSelector(state => state.dev);
+	const { developer } = useSelector(state => state.dev);
 
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
 
-	const data  = {
-		dev_email : email,
-		dev_password : password,
+	const data = {
+		dev_email: email,
+		dev_password: password,
 	}
 
-	if(register.signin){
+	if (developer.signin) {
 		history.push("/projects")
 	}
 
-	console.log(data);
-	console.log(register);
+	// console.log(data);
+	// console.log(register);
 
 	return (
 		<div className="form">
@@ -51,9 +51,9 @@ const Register = () => {
 							type="password"
 							placeholder="password"
 							value={password}
-							onChange={(e) =>setPassword(e.target.value)}
+							onChange={(e) => setPassword(e.target.value)}
 						/>
-						<a href="#/" type="button" className="btn btn--green-lg" onClick={()=> dispatch(newRegister(data)) }> register </a>
+						<a href="#/" type="button" className="btn btn--green-lg" onClick={() => dispatch(newRegister(data))}> register </a>
 						{/* <a href="#/" className="btn btn--green-lg">register</a> */}
 					</form>
 				</div>
