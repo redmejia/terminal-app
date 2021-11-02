@@ -56,7 +56,7 @@ const Register = () => {
 					</form>
 					<p className="heading-secundary">
 						I have an account
-						{" "}<Link className="links-root" to="/">Log In</Link>
+						{" "}<Link className="links-redirect" to="/">Log In</Link>
 					</p>
 				</div>
 			</div>

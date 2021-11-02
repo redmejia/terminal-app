@@ -54,7 +54,7 @@ const Login = () => {
 					</form>
 					<p className="heading-secundary">
 						Don't have an account?
-						{" "}<Link className="links-root" to="/register">Register</Link>
+						{" "}<Link className="links-redirect" to="/register">Register</Link>
 					</p>
 				</div>
 			</div>
