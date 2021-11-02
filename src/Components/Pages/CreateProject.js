@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from 'react-redux'
+import { Link } from "react-router-dom";
 import { createProject } from '../../../src/features/projects/projects'
 import Input from "../Utils/Input";
 import TextArea from "../Utils/TextArea";
@@ -40,7 +41,7 @@ const CreateProject = () => {
 					<span style={{ marginLeft: "6px", marginTop: "4px", height: "25px", width: "25px", backgroundColor: "red", borderRadius: "50%", display: "inline-block" }}></span>
 					<hr style={{ color: "white" }} />
 					<div className="form--box">
-						<h1 style={{ color: "green" }}>Create New project</h1>
+						<p className="heading-primary">Create Project</p>
 						<form>
 							<Input
 								className="form--box__inputs"
@@ -80,7 +81,7 @@ const CreateProject = () => {
 							/>
 						</form>
 						<a href="#/" className="btn btn--green-lg" onClick={() => newProject()}> create </a>
-						<a href="#/" className="btn btn--red-delete-lg">&crarr;</a>
+						<Link className="btn btn--red-delete-lg" to="/me"> &crarr; </Link>
 					</div>
 				</div>
 			</div>

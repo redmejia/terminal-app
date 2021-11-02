@@ -40,7 +40,7 @@ const App = () => {
             <TopProjects />
           </Route>
 
-          <Route path="/me">
+          <Route path="/super-user">
             <TopNavigation />
             <VerticalNav />
             <DevProfile />

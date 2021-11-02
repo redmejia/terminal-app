@@ -1,0 +1,29 @@
+.links {
+	text-decoration: none;
+	color: $color-green-default-1;
+	cursor: pointer;
+
+
+	 &:hover{
+		text-decoration: none;
+		color: $color-green-default-1;
+		cursor: pointer;
+	 }
+	
+}
+
+
+.links-root {
+	color: $color-green-default-1;
+	cursor: pointer;
+
+	font-size: 2rem;
+
+	 &:hover{
+		text-decoration: none;
+		color: $color-green-default-1;
+		cursor: pointer;
+	 }
+	
+}
+

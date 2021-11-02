@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useDispatch, useSelector, clear } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { newRegister } from "../../features/developers/devs";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import Input from "../Utils/Input";
 
 
@@ -35,8 +35,7 @@ const Register = () => {
 				<span style={{ marginLeft: "4px", marginTop: "4px", height: "25px", width: "25px", backgroundColor: "red", borderRadius: "50%", display: "inline-block" }}></span>
 				<hr style={{ color: "white" }} />
 				<div className="form--box">
-					<h1 style={{ color: "black" }}>Register</h1>
-
+					<p className="heading-primary">Register</p>
 					<form>
 						<Input
 							className="form--box__inputs"
@@ -54,8 +53,11 @@ const Register = () => {
 							onChange={(e) => setPassword(e.target.value)}
 						/>
 						<a href="#/" type="button" className="btn btn--green-lg" onClick={() => dispatch(newRegister(data))}> register </a>
-						{/* <a href="#/" className="btn btn--green-lg">register</a> */}
 					</form>
+					<p className="heading-secundary">
+						I have an account
+						{" "}<Link className="links-root" to="/">Log In</Link>
+					</p>
 				</div>
 			</div>
 		</div>
