@@ -30,9 +30,9 @@ const Register = () => {
 	return (
 		<div className="form">
 			<div className="transparent-box">
-				<span style={{ marginLeft: "4px", marginTop: "4px", height: "25px", width: "25px", backgroundColor: "green", borderRadius: "50%", display: "inline-block" }}></span>
-				<span style={{ marginLeft: "4px", marginTop: "4px", height: "25px", width: "25px", backgroundColor: "yellow", borderRadius: "50%", display: "inline-block" }}></span>
-				<span style={{ marginLeft: "4px", marginTop: "4px", height: "25px", width: "25px", backgroundColor: "red", borderRadius: "50%", display: "inline-block" }}></span>
+				<span className="fakes fakes--green"></span>
+				<span className="fakes fakes--yellow"></span>
+				<span className="fakes fakes--red"></span>
 				<hr style={{ color: "white" }} />
 				<div className="form--box">
 					<p className="heading-primary">Register</p>

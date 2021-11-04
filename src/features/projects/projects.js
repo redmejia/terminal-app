@@ -2,16 +2,19 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const projectSlice = createSlice({
 	name: 'projects',
-	initialState: { projects: [] },
+	initialState: { projects: [], isLoaded: false },
 
 	reducers: {
+		loadProject: (state) => {
+			state.isLoad = true
+		},
 		getProjects: (state, action) => {
 			state.projects = action.payload
 		},
 		createNewProject: (state, action) => {
 			return [state.projects, { ...action.payload }]
 		},
-		clearProjectState : (state) => {
+		clearProjectState: (state) => {
 			state.projects = []
 		}
 
@@ -20,18 +23,25 @@ const projectSlice = createSlice({
 
 export default projectSlice.reducer
 
-const { getProjects, createNewProject, clearProjectState } = projectSlice.actions
+const { getProjects, createNewProject, clearProjectState, loadProject } = projectSlice.actions
 
 export const getAllProjects = () => {
-	return (dispatch) => {
-		return fetch('http://127.0.0.1:8080/project', {
+	return async (dispatch) => {
+		let resp = await fetch('http://127.0.0.1:8080/project', {
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json',
 			},
 		})
-			.then(res => res.json())
-			.then(data => { dispatch(getProjects(data)) })
+		const projects = await resp.json()
+		if (!resp.ok) {
+			dispatch(loadProject())
+		} else if (resp.status === 200) {
+
+			dispatch(getProjects(projects))
+		}
+
+
 	}
 }
 

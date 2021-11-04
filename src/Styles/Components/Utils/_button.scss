@@ -58,7 +58,6 @@
 	}
 
 	&--green-lg-solid {
-
 		color: $color-black-default-1;
 		background-color: $color-green-default-1;
 
@@ -66,7 +65,6 @@
 		width: 15rem;
 		// font-weight: 500;
 		border-radius: 8rem;
-
 	}
 
 	// &--green-dev {
@@ -83,7 +81,6 @@
 		border-radius: 5%;
 		border-radius: 8rem;
 
-
 		&:hover {
 			transform: translateX(5px);
 			color: $color-red-danger;
@@ -91,7 +88,6 @@
 			// box-shadow: 0 1rem 2rem rgba($color-red-danger, 0.2);
 		}
 	}
-
 
 	&--red-delete-lg {
 		color: $color-red-danger;
@@ -111,8 +107,6 @@
 		}
 	}
 
-
-
 	&--like {
 		// height: 4rem;
 		// width: 4rem;
@@ -125,5 +119,26 @@
 			color: $color-red-danger;
 			// box-shadow: 0 1rem 2rem rgba($color-red-danger, 0.2);
 		}
+	}
+}
+
+.fakes {
+	height: 2.5625rem;
+	width: 2.5625rem;
+	border-radius: 100%;
+	margin-top: 0.25rem;
+	margin-left: 0.25rem;
+	display: inline-block;
+
+	&--green {
+		background-color: green;
+	}
+
+	&--yellow {
+		background-color: yellow;
+	}
+
+	&--red {
+		background-color: red;
 	}
 }

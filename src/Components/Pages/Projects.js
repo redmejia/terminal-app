@@ -1,18 +1,28 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-
+import { useHistory } from "react-router-dom";
 import Card from "../Utils/Card";
 import Scroll from "../Utils/Scroll";
 
 import { getAllProjects } from '../../../src/features/projects/projects'
 
 const Projects = () => {
+	let history = useHistory()
 	const dispatch = useDispatch()
-	const { projects } = useSelector(state => state.projects);
+	const { projects, isLoad } = useSelector(state => state.projects);
+
 
 	useEffect(() => {
-		dispatch(getAllProjects())
-	}, [dispatch])
+		if (!isLoad) {
+			history.push("/new-project")
+		} else {
+			dispatch(getAllProjects())
+
+		}
+
+	}, [dispatch, isLoad])
+
+	console.log(">.>>>>>>.", isLoad);
 
 	return (
 		<>
