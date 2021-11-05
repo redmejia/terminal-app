@@ -9,20 +9,28 @@ import { getAllProjects } from '../../../src/features/projects/projects'
 const Projects = () => {
 	let history = useHistory()
 	const dispatch = useDispatch()
-	const { projects, isLoad } = useSelector(state => state.projects);
+	const { projects, isLoad, isNotLoad } = useSelector(state => state.projects);
+
+	// useEffect(() => {
+
+	// }, [history, isLoad])
 
 
 	useEffect(() => {
-		if (!isLoad) {
+
+		// console.log("load ",isLoad);
+		// if (isLoad) {
+		// }
+		if (isNotLoad) {
+			// console.log("not load", isNotLoad);
+			
 			history.push("/new-project")
-		} else {
-			dispatch(getAllProjects())
-
 		}
+		dispatch(getAllProjects())
 
-	}, [dispatch, isLoad])
+	}, [dispatch, isLoad, isNotLoad, history])
 
-	console.log(">.>>>>>>.", isLoad);
+	console.log(">.>>>>>>.", isLoad, isNotLoad);
 
 	return (
 		<>

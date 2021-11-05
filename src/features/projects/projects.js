@@ -2,11 +2,14 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const projectSlice = createSlice({
 	name: 'projects',
-	initialState: { projects: [], isLoaded: false },
+	initialState: { projects: [], isLoad: false, isNotLoad: false },
 
 	reducers: {
 		loadProject: (state) => {
 			state.isLoad = true
+		},
+		loadNOTProject: (state) => {
+			state.isNotLoad = true
 		},
 		getProjects: (state, action) => {
 			state.projects = action.payload
@@ -23,7 +26,7 @@ const projectSlice = createSlice({
 
 export default projectSlice.reducer
 
-const { getProjects, createNewProject, clearProjectState, loadProject } = projectSlice.actions
+const { getProjects, createNewProject, clearProjectState, loadProject, loadNOTProject } = projectSlice.actions
 
 export const getAllProjects = () => {
 	return async (dispatch) => {
@@ -34,25 +37,28 @@ export const getAllProjects = () => {
 			},
 		})
 		const projects = await resp.json()
-		if (!resp.ok) {
-			dispatch(loadProject())
-		} else if (resp.status === 200) {
-
+		if (resp.status === 200) {
+			// dispatch(loadProject())
 			dispatch(getProjects(projects))
-		}
+		} else if (resp.status !== 200 || !resp.ok) {
 
+			dispatch(loadNOTProject())
+		}
 
 	}
 }
 
 export const createProject = (project) => {
-	return (dispatch) => {
-		fetch('http://127.0.0.1:8080/project', {
+	return async (dispatch) => {
+		const resp = await fetch('http://127.0.0.1:8080/project', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(project)
 		})
 		dispatch(createNewProject(project))
+		if (resp.ok) {
+			console.log("project was created.");
+		}
 	}
 }
 
