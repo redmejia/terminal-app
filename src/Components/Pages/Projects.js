@@ -9,34 +9,20 @@ import { getAllProjects } from '../../../src/features/projects/projects'
 const Projects = () => {
 	let history = useHistory()
 	const dispatch = useDispatch()
-	const { projects, isLoad, isNotLoad } = useSelector(state => state.projects);
-
-	// useEffect(() => {
-
-	// }, [history, isLoad])
+	const { projects, isLoading} = useSelector(state => state.projects);
 
 
 	useEffect(() => {
+			dispatch(getAllProjects())
+	}, [ dispatch])
 
-		// console.log("load ",isLoad);
-		// if (isLoad) {
-		// }
-		if (isNotLoad) {
-			// console.log("not load", isNotLoad);
-			
-			history.push("/new-project")
-		}
-		dispatch(getAllProjects())
-
-	}, [dispatch, isLoad, isNotLoad, history])
-
-	console.log(">.>>>>>>.", isLoad, isNotLoad);
 
 	return (
 		<>
 			<Scroll>
 
 				{
+					isLoading ? <h1 style={{color : "white"}}>...Loading</h1>:
 					projects.map((i) => {
 						return (
 							<Card

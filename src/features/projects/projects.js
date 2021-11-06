@@ -2,17 +2,18 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const projectSlice = createSlice({
 	name: 'projects',
-	initialState: { projects: [], isLoad: false, isNotLoad: false },
+	initialState: { projects: [], isLoading: true },
 
 	reducers: {
-		loadProject: (state) => {
-			state.isLoad = true
-		},
-		loadNOTProject: (state) => {
-			state.isNotLoad = true
+		loadProject: (state, action) => {
+			state.isLoading = false
 		},
 		getProjects: (state, action) => {
-			state.projects = action.payload
+			return [
+				...state.projects,
+				, { ...action.payload, }
+			]
+			// state.projects = action.payload
 		},
 		createNewProject: (state, action) => {
 			return [state.projects, { ...action.payload }]
@@ -28,24 +29,22 @@ export default projectSlice.reducer
 
 const { getProjects, createNewProject, clearProjectState, loadProject, loadNOTProject } = projectSlice.actions
 
-export const getAllProjects = () => {
-	return async (dispatch) => {
-		let resp = await fetch('http://127.0.0.1:8080/project', {
-			method: 'GET',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-		})
+export const getAllProjects = async (dispatch) => {
+	let resp = await fetch('http://127.0.0.1:8080/project', {
+		method: 'GET',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+	})
+	if (resp.ok && resp.status === "200") {
 		const projects = await resp.json()
-		if (resp.status === 200) {
-			// dispatch(loadProject())
-			dispatch(getProjects(projects))
-		} else if (resp.status !== 200 || !resp.ok) {
+		dispatch(getProjects(projects))
 
-			dispatch(loadNOTProject())
-		}
+	} else {
 
+		dispatch(loadProject())
 	}
+
 }
 
 export const createProject = (project) => {
