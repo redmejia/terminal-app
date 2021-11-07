@@ -9,10 +9,10 @@ const projectSlice = createSlice({
 			state.isLoading = false
 		},
 		getProjects: (state, action) => {
-			return [
-				...state.projects,
-				, { ...action.payload, }
-			]
+			// return [
+			// 	...state.projects,
+			// 	, { ...action.payload, }
+			// ]
 			// state.projects = action.payload
 		},
 		createNewProject: (state, action) => {
