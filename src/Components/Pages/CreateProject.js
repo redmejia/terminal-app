@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useHistory } from "react-router-dom";
 import { createProject } from "../../../src/features/projects/projects";
 
@@ -9,7 +9,7 @@ import TextArea from "../Utils/TextArea";
 
 const CreateProject = () => {
 	const dispatch = useDispatch()
-
+	const { developer } = useSelector(state => state.dev)
 	let history = useHistory()
 
 	const [projectName, setProjectName] = useState("");
@@ -21,11 +21,11 @@ const CreateProject = () => {
 	// let timestamp = d.getTime();
 
 	const data = {
-		dev_id: 53,
+		dev_id: developer.dev_id,
 		project_name: projectName,
 		project_description: projectDescription,
-		created_by: "rey", // get the user from sigin
-		// created: Math.round(timestamp / 1000), // 
+		created_by: developer.dev, // developer username
+		// created: Math.round(timestamp / 1000), // on sever
 		project_repo: projectRepo,
 		project_live: projectLive,
 	}

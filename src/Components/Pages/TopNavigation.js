@@ -15,7 +15,7 @@ const TopNavigation = () => {
 	}
 
 	const { developer } = useSelector(state => state.dev);
-	console.log(developer);
+
 	return (
 		<ul className="top-nav">
 			<li className="top-nav--logo">
