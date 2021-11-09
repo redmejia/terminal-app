@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux'
-import { newRegister } from "../../features/developers/devs";
+import { devRegister } from "../../features/developers/devs";
 import { useHistory, Link } from "react-router-dom";
 import Input from "../Utils/Input";
 
@@ -10,7 +10,7 @@ import Input from "../Utils/Input";
 const Register = () => {
 	let history = useHistory()
 	const dispatch = useDispatch();
-	const { developer } = useSelector(state => state.dev);
+	const { developer, pending } = useSelector(state => state.dev);
 
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
@@ -52,12 +52,19 @@ const Register = () => {
 							value={password}
 							onChange={(e) => setPassword(e.target.value)}
 						/>
-						<a href="#/" type="button" className="btn btn--green-lg" onClick={() => dispatch(newRegister(data))}> register </a>
+						<a href="#/" type="button" className="btn btn--green-lg" onClick={() => dispatch(devRegister(data))}> register </a>
 					</form>
 					<p className="heading-secundary">
 						I have an account
 						{" "}<Link className="links-redirect" to="/">Log In</Link>
 					</p>
+					{pending ?
+						<div className="spinner-border text-danger" role="status">
+							<span className="visually-hidden">Loading...</span>
+						</div>
+
+						: null}
+
 				</div>
 			</div>
 		</div>

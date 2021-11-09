@@ -13,6 +13,8 @@ const Projects = () => {
 	useEffect(() => {
 		dispatch(getAllProjects())
 	}, [dispatch])
+	
+	console.log(projects);
 
 	return (
 		<>

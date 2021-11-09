@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux'
-import { newSignin } from "../../features/developers/devs";
+import { devSignin } from "../../features/developers/devs";
 import { Link, useHistory } from "react-router-dom";
 import Input from "../Utils/Input";
 
 const Login = () => {
 	const dispatch = useDispatch()
-	const { developer } = useSelector(state => state.dev);
+	const { developer, pending } = useSelector(state => state.dev);
 	let history = useHistory()
 
 	const [email, setEmail] = useState("")
@@ -22,10 +22,10 @@ const Login = () => {
 		history.push("/projects")
 	}
 
-
 	return (
 		<div className="form">
 			<div className="transparent-box">
+				{/* fake buttons */}
 				<span className="fakes fakes--green"></span>
 				<span className="fakes fakes--yellow"></span>
 				<span className="fakes fakes--red"></span>
@@ -50,12 +50,17 @@ const Login = () => {
 							value={password}
 							onChange={(e) => setPassword(e.target.value)}
 						/>
-						<a href="#/" type="button" className="btn btn--green-lg" onClick={() => dispatch(newSignin(data))}> log in </a>
+						<a href="#/" type="button" className="btn btn--green-lg" onClick={() => dispatch(devSignin(data))}> log in </a>
 					</form>
 					<p className="heading-secundary">
 						Don't have an account?
 						{" "}<Link className="links-redirect" to="/register">Register</Link>
 					</p>
+					{pending ?
+						<div className="spinner-border text-danger" role="status">
+							<span className="visually-hidden">Loading...</span>
+						</div>
+						: null}
 				</div>
 			</div>
 		</div>

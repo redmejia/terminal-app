@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { useDispatch } from 'react-redux'
-import { Link } from "react-router-dom";
-import { createProject } from '../../../src/features/projects/projects'
+import { Link, useHistory } from "react-router-dom";
+import { createProject } from "../../../src/features/projects/projects";
+
 import Input from "../Utils/Input";
 import TextArea from "../Utils/TextArea";
 
 
 const CreateProject = () => {
 	const dispatch = useDispatch()
+
+	let history = useHistory()
 
 	const [projectName, setProjectName] = useState("");
 	const [projectDescription, setProjectDescription] = useState("");
@@ -29,6 +32,7 @@ const CreateProject = () => {
 
 	const newProject = () => {
 		dispatch(createProject(data))
+		history.push("/super-user")
 	}
 
 	return (
@@ -80,7 +84,7 @@ const CreateProject = () => {
 							/>
 						</form>
 						<a href="#/" className="btn btn--green-lg" onClick={() => newProject()}> create </a>
-						<Link className="btn btn--red-delete-lg" to="/me"> &crarr; </Link>
+						<Link className="btn btn--red-delete-lg" to="/super-user"> &crarr; </Link>
 					</div>
 				</div>
 			</div>
