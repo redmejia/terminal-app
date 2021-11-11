@@ -11,13 +11,12 @@ import CreateProject from './Components/Pages/CreateProject';
 import DevProfile from './Components/Pages/DevProfile';
 
 import '../src/Styles/main.scss';
-import LoadinErr from "./Components/Pages/LoadinErr";
+// import LoadinErr from "./Components/Pages/LoadinErr";
 
 const App = () => {
 
   return (
     <>
-
       <Router>
         <Switch>
           <Route exact path="/">
@@ -52,16 +51,12 @@ const App = () => {
             <CreateProject />
           </Route>
 
-          <Route exact path="/serv-err" >
+          {/* <Route exact path="/serv-err" >
             <LoadinErr />
-          </Route>
+          </Route> */}
 
         </Switch>
       </Router>
-
-
-
-
     </>
   );
 }
