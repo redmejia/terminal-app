@@ -1,23 +1,61 @@
-.project-box {
+// .project-box {
+// 	margin-top: 11rem;
+
+// 	position: absolute;
+// 	// align-items: center;
+// 	top: 50%; // from top
+// 	left: 50%;
+
+// 	transform: translate(-50%, -50%);
+
+// 	&__scroll {
+// 		// position: relative;
+// 		height: 70rem;
+// 		position: relative;
+
+// 		overflow-wrap: scroll;
+// 		overflow-x: hidden;
+
+// 		padding-top: 34rem;
+// 		// margin-top: 20rem;
+// 		// background-color: red;
+// 	}
+// }
+
+.scroll {
 	margin-top: 11rem;
 
-	position: absolute;
+	position: relative;
 	// align-items: center;
 	top: 50%; // from top
 	left: 50%;
 
 	transform: translate(-50%, -50%);
 
-	&__scroll {
+	&--lg {
 		// position: relative;
 		height: 70rem;
-		position: relative;
-
+		position: absolute;
 		overflow-wrap: scroll;
 		overflow-x: hidden;
 
 		padding-top: 34rem;
 		// margin-top: 20rem;
 		// background-color: red;
+	}
+
+	&--sm {
+		margin-top: 1rem;
+		height: 30rem;
+		width: 100%;
+		position: relative;
+
+		overflow-wrap: scroll;
+		overflow-x: hidden;
+
+		// margin-bottom: 4rem;
+
+		
+		// padding-top: 34rem;
 	}
 }

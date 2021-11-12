@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { devSignin } from "../../features/developers/devs";
 import { Link, useHistory } from "react-router-dom";
 import Input from "../Utils/Input";
+import Loading from "../Utils/Loading";
 
 const Login = () => {
 	const dispatch = useDispatch()
@@ -57,9 +58,10 @@ const Login = () => {
 						{" "}<Link className="links-redirect" to="/register">Register</Link>
 					</p>
 					{pending ?
-						<div className="spinner-border text-danger" role="status">
-							<span className="visually-hidden">Loading...</span>
-						</div>
+						<Loading
+							className={"spinner-border text-danger"}
+							role={"status"}
+						/>
 						: null}
 				</div>
 			</div>

@@ -11,7 +11,6 @@ import CreateProject from './Components/Pages/CreateProject';
 import DevProfile from './Components/Pages/DevProfile';
 
 import '../src/Styles/main.scss';
-// import LoadinErr from "./Components/Pages/LoadinErr";
 
 const App = () => {
 
@@ -50,10 +49,6 @@ const App = () => {
             <TopNavigation />
             <CreateProject />
           </Route>
-
-          {/* <Route exact path="/serv-err" >
-            <LoadinErr />
-          </Route> */}
 
         </Switch>
       </Router>

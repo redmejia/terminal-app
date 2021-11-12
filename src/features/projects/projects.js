@@ -26,22 +26,22 @@ const projectSlice = createSlice({
 	name: 'projects',
 	initialState: {
 		projects: [],
-		loading: false,
+		pending: false,
 		created : false,
 	},
 	reducers: {},
 
 	extraReducers:  {
 		[getAllProjects.pending]: (state) => {
-			state.loading = true
+			state.pending = true
 		},
 
 		[getAllProjects.fulfilled]: (state, action) => {
-			state.loading = false
+			state.pending = false
 			state.projects = action.payload
 		},
 		// [getAllProjects.rejected] : (state) =>{
-		// 	state.loading = false
+		// 	state.pending = false
 		// }
 
 		[createProject.pending] : (state) => {

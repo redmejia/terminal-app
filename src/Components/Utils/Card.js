@@ -1,4 +1,6 @@
 import sample from "../../assets/term_log.png"
+import Scroll from "./Scroll";
+
 const Card = (props) => {
 	return (
 		<div className="card" >
@@ -11,12 +13,30 @@ const Card = (props) => {
 					{props.created}
 				</p>
 				<p className="title" >{props.title}</p>
-				<div className="desc-scroll">
+				{/* <div className="desc-scroll"> */}
+				<Scroll
+					className="scroll scroll--sm"
+				>
 					<p className="paragraph">{props.description}</p>
-				</div>
+				</Scroll>
+				{/* </div> */}
 				{/* <a href="#" className="btn btn-primary">++</a> */}
-				<a href="#/" className="btn btn--green"> ++ </a>
-				<p className="btn btn--like"> {props.like}</p>
+			</div>
+			<div style={{ marginTop: '1rem', marginBottom: '1rem', marginLeft: '3rem' }}>
+				<div class="row">
+					<div class="col">
+						<a href="#/" className="btn btn--green"> ++ </a>
+						<p className="btn btn--like"> {props.like}</p>
+
+						<a href="#/">repro: one</a>{" "}
+						<a href="#/">repro: one</a>
+
+					</div>
+					<div class="col">
+						read more 
+					</div>
+
+				</div>
 			</div>
 		</div >
 	);

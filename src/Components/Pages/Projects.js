@@ -4,27 +4,32 @@ import Card from "../Utils/Card";
 import Scroll from "../Utils/Scroll";
 
 import { getAllProjects } from '../../../src/features/projects/projects'
+import Loading from '../Utils/Loading';
 
 const Projects = () => {
 	const dispatch = useDispatch()
-	const { projects, loading } = useSelector(state => state.projects);
+	const { projects, pending } = useSelector(state => state.projects);
 
 
 	useEffect(() => {
 		dispatch(getAllProjects())
 	}, [dispatch])
-	
-	console.log(projects);
+
 
 	return (
 		<>
-			<Scroll>
+			<Scroll
+				className="scroll scroll--lg"
+				// style={{ height: '70rem', paddingTop: '34rem' }}
+			>
 
 				{
-					loading ?
-						<div class="spinner-border text-danger" style={{width: "20rem", height: "20rem"}}  role="status">
-							{/* <span class="visually-hidden">Loading...</span> */}
-						</div>
+					pending ?
+						<Loading
+							className={"spinner-border text-danger"}
+							style={{ width: "20rem", height: "20rem" }}
+							role={"status"}
+						/>
 						:
 						projects.map((i) => {
 							return (

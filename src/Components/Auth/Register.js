@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { devRegister } from "../../features/developers/devs";
 import { useHistory, Link } from "react-router-dom";
 import Input from "../Utils/Input";
+import Loading from "../Utils/Loading";
 
 
 
@@ -23,9 +24,6 @@ const Register = () => {
 	if (developer.signin) {
 		history.push("/projects")
 	}
-
-	// console.log(data);
-	// console.log(register);
 
 	return (
 		<div className="form">
@@ -59,10 +57,10 @@ const Register = () => {
 						{" "}<Link className="links-redirect" to="/">Log In</Link>
 					</p>
 					{pending ?
-						<div className="spinner-border text-danger" role="status">
-							<span className="visually-hidden">Loading...</span>
-						</div>
-
+						<Loading
+							className={"spinner-border text-danger"}
+							role={"status"}
+						/>
 						: null}
 
 				</div>

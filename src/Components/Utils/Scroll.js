@@ -1,9 +1,9 @@
 
 const Scroll = (props) => (
-	<div className="project-box">
-		<div className="project-box__scroll">
+	<div {...props}>
+		{/* <div {...props}> */}
 			{props.children}
-		</div>
+		{/* </div> */}
 
 	</div>
 )
