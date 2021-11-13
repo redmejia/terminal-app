@@ -13,7 +13,7 @@ const Card = (props) => {
 				</p>
 				<p className="title" >{props.title}</p>
 				<div className="scroll--body-card">
-					<p className="paragraph">{props.description}</p>
+					<p className="paragraph">{props.description} ... keep reading and comment </p>
 				</div>
 				{/* <a href="#" className="btn btn-primary">++</a> */}
 			</div>
