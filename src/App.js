@@ -10,6 +10,8 @@ import TopProjects from './Components/Pages/TopProjects';
 import CreateProject from './Components/Pages/CreateProject';
 import DevProfile from './Components/Pages/DevProfile';
 
+import Project from "./Components/Pages/Project";
+
 import '../src/Styles/main.scss';
 
 const App = () => {
@@ -32,6 +34,9 @@ const App = () => {
             <VerticalNav />
             <Projects />
           </Route>
+          
+          {/* Project whole reading like and comment suggestions */}
+          <Route path="/project" component={Project} />
 
           <Route path="/plus-project">
             <TopNavigation />
