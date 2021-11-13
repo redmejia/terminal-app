@@ -1,5 +1,4 @@
 import sample from "../../assets/term_log.png"
-import Scroll from "./Scroll";
 
 const Card = (props) => {
 	return (
@@ -13,13 +12,9 @@ const Card = (props) => {
 					{props.created}
 				</p>
 				<p className="title" >{props.title}</p>
-				{/* <div className="desc-scroll"> */}
-				<Scroll
-					className="scroll scroll--sm"
-				>
+				<div className="scroll--body-card">
 					<p className="paragraph">{props.description}</p>
-				</Scroll>
-				{/* </div> */}
+				</div>
 				{/* <a href="#" className="btn btn-primary">++</a> */}
 			</div>
 			<div style={{ marginTop: '1rem', marginBottom: '1rem', marginLeft: '3rem' }}>
@@ -33,7 +28,7 @@ const Card = (props) => {
 
 					</div>
 					<div class="col">
-						read more 
+						You want to read more and comment
 					</div>
 
 				</div>

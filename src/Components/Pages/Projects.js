@@ -19,8 +19,7 @@ const Projects = () => {
 	return (
 		<>
 			<Scroll
-				className="scroll scroll--lg"
-				// style={{ height: '70rem', paddingTop: '34rem' }}
+				className="scroll"
 			>
 
 				{
