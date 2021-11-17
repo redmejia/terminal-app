@@ -31,6 +31,20 @@ export const Api = {
 
 
 
+	async getByProID(proid) {
+		const resp = await fetch(BASE_URL+"project?proID="+proid,{
+			method: 'GET',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+
+		})
+
+		return resp.json()
+
+	},
+
+
 
 
 

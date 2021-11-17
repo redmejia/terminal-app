@@ -36,7 +36,7 @@ const App = () => {
           </Route>
           
           {/* Project whole reading like and comment suggestions */}
-          <Route path="/project" component={Project} />
+          <Route path="/project/pro-id/:proid" component={Project} />
 
           <Route path="/plus-project">
             <TopNavigation />

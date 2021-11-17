@@ -32,13 +32,14 @@ const Projects = () => {
 						:
 						projects.map((i) => {
 							return (
-								<Card
-									created={i.created}
-									created_by={i.created_by}
-									like={i.project_like.like_count}
-									title={i.project_name}
-									description={i.project_description}
-								/>
+									<Card
+										created={i.created}
+										created_by={i.created_by}
+										like={i.project_like.like_count}
+										title={i.project_name}
+										description={i.project_description}
+										project_id={i.project_id}
+									/>
 							)
 						})
 				}
