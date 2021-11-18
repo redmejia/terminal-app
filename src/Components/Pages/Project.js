@@ -23,13 +23,14 @@ const Project = () => {
 	return (
 
 		<>
+
 			{
 				pending ? <Loading
 					className={"spinner-border text-danger"}
 					style={{ width: "20rem", height: "20rem" }}
 					role={"status"}
 				/> :
-					<div>
+					<div className="card-project">
 						<Card
 							created={project.created}
 							created_by={project.created_by}

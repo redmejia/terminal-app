@@ -1,13 +1,13 @@
 .card {
 	width: 80rem;
-	
-	position: relative;
+
+	// position: relative;
 	// padding-top: 90rem;
 	margin-top: 5rem;
 
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border: none;
+	// left: 50%;
+	// transform: translate(-50%, -50%);
+	// border: none;
 	// overflow: hidden;
 	&-body {
 		height: 30rem;
@@ -18,3 +18,10 @@
 	}
 }
 
+.card-project {
+	position: absolute;
+	top: 50%; // from top
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+}
