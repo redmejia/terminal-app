@@ -1,30 +1,56 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux'
+
+import { getAllProjects } from '../../../src/features/projects/projects'
+import Loading from '../Utils/Loading';
+
 
 
 import Card from "../Utils/Card";
 import Scroll from "../Utils/Scroll";
+
+
+// this is just data test for retrive i will get all top liked project here.
+
 const TopProjects = () => {
+
+	const dispatch = useDispatch()
+	const { projects, pending } = useSelector(state => state.projects);
+
+
+	useEffect(() => {
+		dispatch(getAllProjects())
+	}, [dispatch])
+
+
 	return (
 
-		<>
+		<Scroll
+			className="scroll"
+		>
 
-			<Scroll>
-
-
-				<Card
-
-					title="hello world."
-					description="this is a test."
-				/>
-
-				<Card
-
-					title="hello"
-					description="this is a test."
-				/>
-			</Scroll>
-
-
-		</>
+			{
+				pending ?
+					<Loading
+						className={"spinner-border text-danger"}
+						style={{ width: "20rem", height: "20rem" }}
+						role={"status"}
+					/>
+					:
+					projects.map((i) => {
+						return (
+							<Card
+								created={i.created}
+								created_by={i.created_by}
+								like={i.project_like.like_count}
+								title={i.project_name}
+								description={i.project_description}
+								project_id={i.project_id}
+							/>
+						)
+					})
+			}
+		</Scroll>
 
 	);
 }
