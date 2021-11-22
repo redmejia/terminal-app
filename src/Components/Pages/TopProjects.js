@@ -22,8 +22,7 @@ const TopProjects = () => {
 		dispatch(getAllTopProjects())
 	}, [dispatch])
 
-	console.log(projects);
-
+	
 	return (
 
 		<Scroll
