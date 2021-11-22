@@ -1,16 +1,10 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-
 import { getAllTopProjects } from '../../../src/features/projects/projects'
 import Loading from '../Utils/Loading';
-
-
-
 import Card from "../Utils/Card";
 import Scroll from "../Utils/Scroll";
 
-
-// this is just data test for retrive i will get all top liked project here.
 
 const TopProjects = () => {
 
@@ -22,7 +16,7 @@ const TopProjects = () => {
 		dispatch(getAllTopProjects())
 	}, [dispatch])
 
-	
+
 	return (
 
 		<Scroll
