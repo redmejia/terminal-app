@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 
-import { getAllProjects } from '../../../src/features/projects/projects'
+import { getAllTopProjects } from '../../../src/features/projects/projects'
 import Loading from '../Utils/Loading';
 
 
@@ -19,9 +19,10 @@ const TopProjects = () => {
 
 
 	useEffect(() => {
-		dispatch(getAllProjects())
+		dispatch(getAllTopProjects())
 	}, [dispatch])
 
+	console.log(projects);
 
 	return (
 

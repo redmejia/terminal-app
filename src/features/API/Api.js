@@ -30,8 +30,8 @@ export const Api = {
 	},
 
 
-
-	async getByProID(proid) {
+	// fetchin by project id
+	async fetchProjectByProID(proid) {
 		const resp = await fetch(BASE_URL+"project?proID="+proid,{
 			method: 'GET',
 			headers: {
@@ -45,7 +45,18 @@ export const Api = {
 	},
 
 
+	// fetchin all top projects
+	async fetchTopProjects(){
+		const resp = await fetch(BASE_URL + "project?top-projects=all",{
+			method: 'GET',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		})
 
+		return resp.json()
+
+	},
 
 
 	// projects fetch, create update and delete
@@ -70,33 +81,3 @@ export const Api = {
 	}
 
 }
-
-
-// export const fetchAll = () => {
-// 	return fetch(BASE_URL + "project", {
-// 		method: 'GET',
-// 		headers: {
-// 			'Content-Type': 'application/json',
-// 		},
-// 	})
-// }
-
-// export const createNewProject = (project) => {
-// 	return fetch(BASE_URL + "project", {
-// 		method: 'POST',
-// 		headers: { 'Content-Type': 'application/json' },
-// 		body: JSON.stringify(project)
-// 	})
-// }
-
-
-// // Auths
-// export const signinOrRegister = (developer) => {
-// 	return fetch(BASE_URL + "signin", {
-// 		method: "POST",
-// 		headers: {
-// 			'Content-Type': 'application/json',
-// 		},
-// 		body: JSON.stringify(developer)
-// 	})
-// }

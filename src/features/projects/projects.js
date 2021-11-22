@@ -6,7 +6,16 @@ import { Api } from "../API/Api";
 export const getProjectById = createAsyncThunk(
 	'projects/fetchProjectById',
 	async (proid,  thunkAPI) => {
-		const resp = await Api.getByProID(proid)
+		const resp = await Api.fetchProjectByProID(proid)
+		return resp
+	}
+)
+
+// retrive all top projects
+export const getAllTopProjects = createAsyncThunk(
+	'projects/fetchTopProjects',
+	async () =>{
+		const resp = await Api.fetchTopProjects()
 		return resp
 	}
 )
@@ -51,6 +60,16 @@ const projectSlice = createSlice({
 			state.project = action.payload
 		},
 		
+
+		// retrive all top projects
+		[getAllTopProjects.pending] : (state) =>{
+			state.pending = true
+		},
+		[getAllTopProjects.fulfilled] : (state, action) =>{
+			state.pending = false
+			state.projects = action.payload
+		},
+
 
 		
 		// retrive all projects
