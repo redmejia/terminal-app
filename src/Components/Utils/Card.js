@@ -17,23 +17,8 @@ const Card = (props) => {
 					<div className="scroll--body-card">
 						<p className="paragraph">{props.description} ... keep reading and comment </p>
 					</div>
+					
 					{/* <a href="#" className="btn btn-primary">++</a> */}
-				</div>
-				<div style={{ marginTop: '1rem', marginBottom: '1rem', marginLeft: '3rem' }}>
-					<div class="row">
-						<div class="col">
-							<a href="#/" className="btn btn--green"> ++ </a>
-							<p className="btn btn--like"> {props.like}</p>
-
-							<a href="#/">repro: one</a>{" "}
-							<a href="#/">repro: one</a>
-
-						</div>
-						<div class="col">
-							You want to read more and comment
-						</div>
-
-					</div>
 				</div>
 			</div >
 

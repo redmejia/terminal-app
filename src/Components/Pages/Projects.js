@@ -5,6 +5,7 @@ import Scroll from "../Utils/Scroll";
 
 import { getAllProjects } from '../../../src/features/projects/projects'
 import Loading from '../Utils/Loading';
+import CardFooter from '../Utils/CardFooter';
 
 const Projects = () => {
 	const dispatch = useDispatch()
@@ -32,14 +33,22 @@ const Projects = () => {
 						:
 						projects.map((i) => {
 							return (
+								<>
 									<Card
 										created={i.created}
 										created_by={i.created_by}
-										like={i.project_like.like_count}
 										title={i.project_name}
 										description={i.project_description}
 										project_id={i.project_id}
 									/>
+									<CardFooter
+										show_btn={false} // show like button only when is click for read
+										project_name={i.project_name}
+										like={i.project_like.like_count}
+										repo={i.project_repo}
+										live={i.project_live}
+									/>
+								</>
 							)
 						})
 				}

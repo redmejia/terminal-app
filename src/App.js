@@ -19,6 +19,8 @@ const App = () => {
   return (
     <>
       <Router>
+        {/* <TopNavigation />
+        <VerticalNav /> */}
         <Switch>
           <Route exact path="/">
             <Login />
@@ -28,15 +30,17 @@ const App = () => {
             <Register />
           </Route>
 
-
           <Route path="/projects">
             <TopNavigation />
             <VerticalNav />
             <Projects />
           </Route>
-          
-          {/* Project whole reading like and comment suggestions */}
-          <Route path="/project/pro-id/:proid" component={Project} />
+
+          <Route path="/project/pro-id/:proid">
+            <TopNavigation />
+            <VerticalNav />
+            <Project />
+          </Route>
 
           <Route path="/plus-project">
             <TopNavigation />
