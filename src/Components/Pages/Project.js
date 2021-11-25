@@ -6,6 +6,7 @@ import Card from "../Utils/Card";
 import { getProjectById } from "../../features/projects/projects";
 import Loading from "../Utils/Loading";
 import CardFooter from "../Utils/CardFooter";
+import Comments from "./Comments";
 
 const Project = () => {
 	let { proid } = useParams()
@@ -45,8 +46,11 @@ const Project = () => {
 							repo={project.project_repo}
 							live={project.project_live}
 						/>
+						<h1 style={{color:'white'}}>Comments</h1>
 					</div>
 			}
+			<Comments />
+
 		</>
 	)
 }

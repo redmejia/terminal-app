@@ -1,5 +1,4 @@
-
-// all projects scroll 
+// scroll for all projects
 .scroll {
 	margin-top: 5rem;
 	// padding-top: 1rem;
@@ -11,9 +10,27 @@
 	transform: translate(-50%, -50%);
 
 	height: 80rem; // change style responsicve to large screen
+
 	overflow-wrap: scroll;
 	overflow-x: hidden;
+}
 
+// scroll for comment
+.scroll-comment {
+	margin-top: 2rem;
+	// padding-top: 1rem;
+
+	position: absolute;
+	top: 50%; // from top
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+	
+	height: 70rem; // change style responsicve to large screen
+	width: 70%;
+
+	overflow-wrap: scroll;
+	overflow-x: hidden;
 }
 
 // project description body card
