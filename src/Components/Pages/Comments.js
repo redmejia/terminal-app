@@ -1,5 +1,27 @@
 import Scroll from "../Utils/Scroll";
 
+const commnets = [
+	// { id: 1, comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" },
+	{ id: 1, dev: "rey", comment: "this is short" },
+	{ id: 2, dev: "rey", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" },
+	{ id: 3, dev: "rey", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" },
+	{ id: 4, dev: "me", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" },
+	{ id: 5, dev: "me", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" },
+	{ id: 6, dev: "me", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" },
+	{ id: 7, dev: "me", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" },
+	{ id: 8, dev: "me", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" },
+	{ id: 9, dev: "xxx", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" },
+	{ id: 10, dev: "lolo", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" },
+	{ id: 11, comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" },
+	{ id: 12, comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" },
+	{ id: 13, comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" },
+	{ id: 14, comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" },
+	{ id: 15, comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" },
+	{ id: 16, comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" },
+
+]
+
+
 const Comments = () => {
 	return (
 		<div className="comment-box">
@@ -11,273 +33,17 @@ const Comments = () => {
 				<Scroll
 					className="scroll-comment"
 				>
-					<p>
-
-						Mama take this badge from me
-						I can't use it anymore
-						It's getting dark too dark to see
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, eh yeah
-						Mama put my guns in the ground
-						I can't shoot them anymore
-						That cold black cloud is comin' down
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, wow oh yeah
-
-
-						Mama take this badge from me
-						I can't use it anymore
-						It's getting dark too dark to see
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, eh yeah
-						Mama put my guns in the ground
-						I can't shoot them anymore
-						That cold black cloud is comin' down
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, wow oh yeah
-
-
-						Mama take this badge from me
-						I can't use it anymore
-						It's getting dark too dark to see
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, eh yeah
-						Mama put my guns in the ground
-						I can't shoot them anymore
-						That cold black cloud is comin' down
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, wow oh yeah
-
-
-						Mama take this badge from me
-						I can't use it anymore
-						It's getting dark too dark to see
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, eh yeah
-						Mama put my guns in the ground
-						I can't shoot them anymore
-						That cold black cloud is comin' down
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, wow oh yeah
-
-
-						Mama take this badge from me
-						I can't use it anymore
-						It's getting dark too dark to see
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, eh yeah
-						Mama put my guns in the ground
-						I can't shoot them anymore
-						That cold black cloud is comin' down
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, wow oh yeah
-
-						Mama take this badge from me
-						I can't use it anymore
-						It's getting dark too dark to see
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, eh yeah
-						Mama put my guns in the ground
-						I can't shoot them anymore
-						That cold black cloud is comin' down
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, wow oh yeah
-
-						Mama take this badge from me
-						I can't use it anymore
-						It's getting dark too dark to see
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, eh yeah
-						Mama put my guns in the ground
-						I can't shoot them anymore
-						That cold black cloud is comin' down
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, wow oh yeah
-						Mama take this badge from me
-						I can't use it anymore
-						It's getting dark too dark to see
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, eh yeah
-						Mama put my guns in the ground
-						I can't shoot them anymore
-						That cold black cloud is comin' down
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, wow oh yeah
-						Mama take this badge from me
-						I can't use it anymore
-						It's getting dark too dark to see
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, eh yeah
-						Mama put my guns in the ground
-						I can't shoot them anymore
-						That cold black cloud is comin' down
-						Feels like I'm knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door
-						Knock-knock-knockin' on heaven's door, wow oh yeah
-
-
-					</p>
+					{
+						commnets.map((i) => {
+							return (
+								<div className="comment">
+									<p className="paragraph">
+										<span className="comment-from">root@{i.dev}{">_ "}{" "}</span>{i.comment}
+									</p>
+								</div>
+							)
+						})
+					}
 				</Scroll>
 
 			</div>

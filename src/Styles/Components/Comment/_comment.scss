@@ -11,3 +11,19 @@
 
 	background-color: $color-black-default-4;
 }
+.comment {
+	background-color: $color-green-default-1;
+
+	
+	// border-radius: 2%;
+
+	align-items: center;
+	text-align: left;
+
+	border-radius: 1rem;
+}
+
+.comment-from{
+	color: $color-red-danger;
+	font-weight: bold;
+}
