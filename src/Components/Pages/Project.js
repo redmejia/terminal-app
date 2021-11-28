@@ -25,7 +25,6 @@ const Project = () => {
 	return (
 
 		<>
-
 			{
 				pending ? <Loading
 					className={"spinner-border text-danger"}
@@ -34,6 +33,8 @@ const Project = () => {
 				/> :
 					<div className="card-project">
 						<Card
+							cardSize={"card card-lg"}
+							cardBody={"card card-lg--body"}
 							created={project.created}
 							created_by={project.created_by}
 							title={project.project_name}
@@ -46,11 +47,10 @@ const Project = () => {
 							repo={project.project_repo}
 							live={project.project_live}
 						/>
-						<h1 style={{color:'white'}}>Comments</h1>
+						<h1 style={{ color: 'white' }}>Comments</h1>
+						<Comments />
 					</div>
 			}
-			<Comments />
-
 		</>
 	)
 }

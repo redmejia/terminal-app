@@ -4,9 +4,9 @@ import sample from "../../assets/term_log.png"
 const Card = (props) => {
 	return (
 		<Link className="links" to={`/project/pro-id/${props.project_id}`}>
-			<div className="card" >
+			<div className={props.cardSize}>
 				<img className="card-img-top" src={sample} alt="sample" />
-				<div className="card-body">
+				<div className={props.cardBody}>
 					{/* <h5 className="heading-primary">{props.title}</h5> */}
 					<p >
 						<em>@{props.created_by}</em>

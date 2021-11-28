@@ -36,6 +36,8 @@ const TopProjects = () => {
 						return (
 							<>
 								<Card
+									cardSize={"card card-rg"}
+									cardBody={"card card-rg--body"}
 									created={i.created}
 									created_by={i.created_by}
 									title={i.project_name}
@@ -54,7 +56,6 @@ const TopProjects = () => {
 					})
 			}
 		</Scroll>
-
 	);
 }
 

@@ -1,21 +1,15 @@
 .comment-box {
-	margin-top: 100rem;
-	position: absolute;
-	
+	position: relative;
 	height: 90vh;
-	width: 100%;
 
 	top: 50%;
 	left: 50%;
+
 	transform: translate(-50%, -50%);
 
-	background-color: $color-black-default-4;
 }
 .comment {
 	background-color: $color-green-default-1;
-
-	
-	// border-radius: 2%;
 
 	align-items: center;
 	text-align: left;

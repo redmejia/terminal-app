@@ -38,7 +38,7 @@ const Comments = () => {
 							return (
 								<div className="comment">
 									<p className="paragraph">
-										<span className="comment-from">root@{i.dev}{">_ "}{" "}</span>{i.comment}
+										<span className="comment-from">{i.dev}{" "}</span>{i.comment}
 									</p>
 								</div>
 							)
