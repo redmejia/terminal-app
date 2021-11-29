@@ -38,6 +38,7 @@ const Project = () => {
 							created={project.created}
 							created_by={project.created_by}
 							title={project.project_name}
+							isScroll={true}
 							description={project.project_description}
 							project_id={project.project_id}
 						/>

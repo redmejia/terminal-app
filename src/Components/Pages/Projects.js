@@ -42,6 +42,7 @@ const Projects = () => {
 										created_by={i.created_by}
 										title={i.project_name}
 										description={i.project_description}
+										message={" ...read more about this project"} 
 										project_id={i.project_id}
 									/>
 									<CardFooter
