@@ -17,21 +17,22 @@
 
 // scroll for comment
 .scroll-comment {
-	margin-top: 2rem;
-	// padding-top: 1rem;
+	// margin-top: 1rem;
+	// padding-top: 23rem;
 
 	position: absolute;
-	top: 50%; // from top
+	top: 45%; // from top
 	left: 50%;
 
 	transform: translate(-50%, -50%);
 	
 	height: 70rem; // change style responsicve to large screen
-	width: 70%;
+	width: 90%;
 
 	overflow-wrap: scroll;
 	overflow-x: hidden;
 }
+
 
 // project description body card
 // .scroll--body-card {

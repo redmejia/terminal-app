@@ -1,6 +1,6 @@
 .comment-box {
 	position: relative;
-	height: 90vh;
+	height: 100vh;
 
 	top: 50%;
 	left: 50%;
@@ -20,4 +20,16 @@
 .comment-from{
 	color: $color-red-danger;
 	font-weight: bold;
+}
+
+.comment-area{
+	position: absolute;
+	top: 90%; // from top
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+	
+	// height: 70rem; // change style responsicve to large screen
+	// width: 70%;
+
 }

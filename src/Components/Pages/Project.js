@@ -49,7 +49,7 @@ const Project = () => {
 							live={project.project_live}
 						/>
 						<h1 style={{ color: 'white' }}>Comments</h1>
-						<Comments />
+						<Comments dev={project.created_by} project_id={project.project_id} />
 					</div>
 			}
 		</>
