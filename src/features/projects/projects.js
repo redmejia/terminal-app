@@ -45,6 +45,7 @@ const projectSlice = createSlice({
 	initialState: {
 		projects: [],
 		project : {},
+		comment : [],
 		pending: false,
 		created: false,
 	},
