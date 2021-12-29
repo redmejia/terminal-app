@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import sample from "../../assets/term_log.png"
-
+// card utility
 const Card = (props) => {
 	return (
 		<div className={props.cardSize}>
